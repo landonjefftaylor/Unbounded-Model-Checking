@@ -1,0 +1,75 @@
+
+Isolate this:
+Checking invariants at depth 0...
+Checking invariants at depth 1...
+Checking invariants at depth 2...
+Checking invariants at depth 3...
+Checking invariants at depth 4...
+Checking invariants at depth 5...
+searching for a small model... done
+BMC with bound 5 found a counter-example...
+
+[
+    5:t = 5
+    1:t = 1
+    0:t = 0
+    test.x = 0
+]
+init
+
+{
+    bmc6_xinc.ivy: line 14: test.x := 0:t
+
+}
+
+call test.transition
+
+{
+    bmc6_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 1
+    ]
+}
+
+call test.transition
+
+{
+    bmc6_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 2
+    ]
+}
+
+call test.transition
+
+{
+    bmc6_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 3
+    ]
+}
+
+call test.transition
+
+{
+    bmc6_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 4
+    ]
+}
+
+call test.transition
+
+{
+    bmc6_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 5
+    ]
+}
+
+

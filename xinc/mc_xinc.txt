@@ -1,0 +1,98 @@
+
+Isolate this:
+
+********************************************************************************
+
+mc_xinc.ivy: line 23: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpVWwZjO.aig; pdr; write_aiger_cex  /tmp/tmpVWwZjO.out".
+
+Output 0 of miter "/tmp/tmpVWwZjO" was asserted in frame 6.  Time =     0.01 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+err_flag := false
+
+mc_xinc.ivy: line 14: test.x := 0:t
+
+[
+    test.x = 0
+]
+__init := true
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 1
+    ]
+}
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 2
+    ]
+}
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 3
+    ]
+}
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 4
+    ]
+}
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 5
+    ]
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************

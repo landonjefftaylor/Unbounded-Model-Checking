@@ -1,0 +1,26 @@
+#lang ivy1.7
+
+# attribute method = mc
+# attribute method = bmc[3]
+
+type t
+interpret t -> bv[4]
+
+object test = {
+
+  individual x : t
+
+  after init {
+    x := 0;
+  } 
+
+  action transition = {
+    x := x + 1;
+  }
+  
+  export transition
+  
+  invariant x ~= 5
+  
+}
+

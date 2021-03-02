@@ -1,0 +1,37 @@
+
+Isolate this:
+
+    The inductive invariant consists of the following conjectures:
+        xinc.ivy: line 23: test.invar3
+
+    The following action implementations are present:
+        xinc.ivy: line 17: implementation of test.transition
+
+    The following initializers are present:
+        xinc.ivy: line 13: test.init[after2]
+
+    Initialization must establish the invariant
+        xinc.ivy: line 23: test.invar3 ... PASS
+
+    Any assertions in initializers must be checked ... PASS
+
+    The following set of external actions must preserve the invariant:
+        (internal) ext:test.transition
+            xinc.ivy: line 23: test.invar3 ... FAIL
+searching for a small model... done
+[
+    1:t = 1
+    5:t = 5
+    test.x = 4
+]
+call test.transition
+
+{
+    xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 5
+    ]
+}
+
+
