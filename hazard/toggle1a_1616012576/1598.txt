@@ -1,0 +1,1155 @@
+
+Isolate this:
+
+********************************************************************************
+
+toggle1a_1616012576/1598.ivy: line 94: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmptnEjzG.aig; pdr; write_aiger_cex  /tmp/tmptnEjzG.out".
+
+Output 0 of miter "/tmp/tmptnEjzG" was asserted in frame 51.  Time =     0.29 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+err_flag := false
+
+toggle1a_1616012576/1598.ivy: line 32: tetr_def.tetr := 0:bv8
+
+[
+    tetr_def.tetr = 0
+]
+toggle1a_1616012576/1598.ivy: line 66: laci_def.laci := 60:bv8
+
+[
+    laci_def.laci = 60
+]
+__init := true
+
+[
+    rand = false
+]
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 86: laci_def.laci := laci_def.laci - 1
+
+        [
+            laci_def.laci = 59
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 86: laci_def.laci := laci_def.laci - 1
+
+        [
+            laci_def.laci = 58
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 86: laci_def.laci := laci_def.laci - 1
+
+        [
+            laci_def.laci = 57
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 86: laci_def.laci := laci_def.laci - 1
+
+        [
+            laci_def.laci = 56
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 86: laci_def.laci := laci_def.laci - 1
+
+        [
+            laci_def.laci = 55
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 86: laci_def.laci := laci_def.laci - 1
+
+        [
+            laci_def.laci = 54
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 86: laci_def.laci := laci_def.laci - 1
+
+        [
+            laci_def.laci = 53
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 63
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 73
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 83
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 93
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 103
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 113
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 123
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 86: laci_def.laci := laci_def.laci - 1
+
+        [
+            laci_def.laci = 122
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = true
+    ]
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 39: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 10
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 53: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 9
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = true
+    ]
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 50: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 19
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 53: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 18
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = true
+    ]
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 53: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 17
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = true
+    ]
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 53: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 16
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = true
+    ]
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 53: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 15
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = true
+    ]
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 53: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 14
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 132
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 142
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 152
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 162
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 172
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 86: laci_def.laci := laci_def.laci - 1
+
+        [
+            laci_def.laci = 171
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 181
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 191
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 201
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 211
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 221
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 50: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 24
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 50: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 34
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 231
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 50: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 44
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 50: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 54
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 50: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 64
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 50: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 74
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 50: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 84
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 53: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 83
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = true
+    ]
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 50: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 93
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 50: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 103
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 50: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 113
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 241
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 251
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    toggle1a_1616012576/1598.ivy: line 15: call tetr_def.update_tetr
+    {
+        toggle1a_1616012576/1598.ivy: line 36: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 50: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 123
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle1a_1616012576/1598.ivy: line 13: rand := *
+
+    [
+        rand = false
+    ]
+    toggle1a_1616012576/1598.ivy: line 18: call laci_def.update_laci
+    {
+        toggle1a_1616012576/1598.ivy: line 70: rand := *
+
+        toggle1a_1616012576/1598.ivy: line 83: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 5
+        ]
+    }
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************
