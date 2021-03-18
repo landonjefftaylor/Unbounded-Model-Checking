@@ -11,9 +11,9 @@ Instantiating axioms...
 
 Model checker output:
 --------------------------------------------------------------------------------
-ABC command line: "read_aiger /tmp/tmpj4byVa.aig; pdr; write_aiger_cex  /tmp/tmpj4byVa.out".
+ABC command line: "read_aiger /tmp/tmpAY4qF_.aig; pdr; write_aiger_cex  /tmp/tmpAY4qF_.out".
 
-Output 0 of miter "/tmp/tmpj4byVa" was asserted in frame 55.  Time =     0.05 sec
+Output 0 of miter "/tmp/tmpAY4qF_" was asserted in frame 55.  Time =     0.04 sec
 --------------------------------------------------------------------------------
 
 FAIL
