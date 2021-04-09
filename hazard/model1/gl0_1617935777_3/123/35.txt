@@ -1,0 +1,897 @@
+
+Isolate this:
+
+********************************************************************************
+
+gl0_1617935777_3/123/35.ivy: line 150: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmppuf3C7.aig; pdr; write_aiger_cex  /tmp/tmppuf3C7.out".
+
+Output 0 of miter "/tmp/tmppuf3C7" was asserted in frame 13.  Time =     0.78 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+err_flag := false
+
+gl0_1617935777_3/123/35.ivy: line 35: max := 100:bv8
+
+[
+    max = 100
+]
+gl0_1617935777_3/123/35.ivy: line 121: amtr.protein := 0:bv8
+
+[
+    amtr.protein = 0
+]
+gl0_1617935777_3/123/35.ivy: line 121: beti.protein := 70:bv8
+
+[
+    beti.protein = 70
+]
+gl0_1617935777_3/123/35.ivy: line 121: hlyiir.protein := 70:bv8
+
+[
+    hlyiir.protein = 70
+]
+gl0_1617935777_3/123/35.ivy: line 121: phlf.protein := 70:bv8
+
+[
+    phlf.protein = 70
+]
+gl0_1617935777_3/123/35.ivy: line 121: yfp.protein := 0:bv8
+
+[
+    yfp.protein = 0
+]
+__init := true
+
+[
+    spec.rand = 13
+    b0 = 64
+    p1 = 0
+    b1 = 0
+    a0 = 0
+    a2 = 0
+    y1 = 0
+    b2 = 0
+    y2 = 0
+    p2 = 128
+    p0 = 0
+    h2 = 16
+    h1 = 128
+    h0 = 0
+    y0 = 0
+    a1 = 0
+]
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl0_1617935777_3/123/35.ivy: line 39: assume err_flag | yfp.protein < 30
+
+    gl0_1617935777_3/123/35.ivy: line 44: a2 := a1
+
+    gl0_1617935777_3/123/35.ivy: line 45: b2 := b1
+
+    gl0_1617935777_3/123/35.ivy: line 46: h2 := h1
+
+    [
+        h2 = 128
+    ]
+    gl0_1617935777_3/123/35.ivy: line 47: p2 := p1
+
+    [
+        p2 = 0
+    ]
+    gl0_1617935777_3/123/35.ivy: line 48: y2 := y1
+
+    gl0_1617935777_3/123/35.ivy: line 49: a1 := a0
+
+    gl0_1617935777_3/123/35.ivy: line 50: b1 := b0
+
+    [
+        b1 = 64
+    ]
+    gl0_1617935777_3/123/35.ivy: line 51: h1 := h0
+
+    [
+        h1 = 0
+    ]
+    gl0_1617935777_3/123/35.ivy: line 52: p1 := p0
+
+    gl0_1617935777_3/123/35.ivy: line 53: y1 := y0
+
+    gl0_1617935777_3/123/35.ivy: line 54: a0 := amtr.protein
+
+    gl0_1617935777_3/123/35.ivy: line 55: b0 := beti.protein
+
+    [
+        b0 = 70
+    ]
+    gl0_1617935777_3/123/35.ivy: line 56: h0 := hlyiir.protein
+
+    [
+        h0 = 70
+    ]
+    gl0_1617935777_3/123/35.ivy: line 57: p0 := phlf.protein
+
+    [
+        p0 = 70
+    ]
+    gl0_1617935777_3/123/35.ivy: line 58: y0 := yfp.protein
+
+    gl0_1617935777_3/123/35.ivy: line 60: spec.rand := *
+
+    [
+        spec.rand = 11
+    ]
+    gl0_1617935777_3/123/35.ivy: line 61: assume err_flag | spec.rand ~= 15
+
+    gl0_1617935777_3/123/35.ivy: line 96: call phlf.protein_interaction_1
+    {
+        gl0_1617935777_3/123/35.ivy: line 138: phlf.protein := phlf.protein + 10
+
+        [
+            phlf.protein = 80
+        ]
+        gl0_1617935777_3/123/35.ivy: line 108: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 30 & beti.protein = 100 & hlyiir.protein = 70 & phlf.protein = 70 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl0_1617935777_3/123/35.ivy: line 39: assume err_flag | yfp.protein < 30
+
+    gl0_1617935777_3/123/35.ivy: line 44: a2 := a1
+
+    gl0_1617935777_3/123/35.ivy: line 45: b2 := b1
+
+    [
+        b2 = 64
+    ]
+    gl0_1617935777_3/123/35.ivy: line 46: h2 := h1
+
+    [
+        h2 = 0
+    ]
+    gl0_1617935777_3/123/35.ivy: line 47: p2 := p1
+
+    gl0_1617935777_3/123/35.ivy: line 48: y2 := y1
+
+    gl0_1617935777_3/123/35.ivy: line 49: a1 := a0
+
+    gl0_1617935777_3/123/35.ivy: line 50: b1 := b0
+
+    [
+        b1 = 70
+    ]
+    gl0_1617935777_3/123/35.ivy: line 51: h1 := h0
+
+    [
+        h1 = 70
+    ]
+    gl0_1617935777_3/123/35.ivy: line 52: p1 := p0
+
+    [
+        p1 = 70
+    ]
+    gl0_1617935777_3/123/35.ivy: line 53: y1 := y0
+
+    gl0_1617935777_3/123/35.ivy: line 54: a0 := amtr.protein
+
+    gl0_1617935777_3/123/35.ivy: line 55: b0 := beti.protein
+
+    gl0_1617935777_3/123/35.ivy: line 56: h0 := hlyiir.protein
+
+    gl0_1617935777_3/123/35.ivy: line 57: p0 := phlf.protein
+
+    [
+        p0 = 80
+    ]
+    gl0_1617935777_3/123/35.ivy: line 58: y0 := yfp.protein
+
+    gl0_1617935777_3/123/35.ivy: line 60: spec.rand := *
+
+    [
+        spec.rand = 4
+    ]
+    gl0_1617935777_3/123/35.ivy: line 61: assume err_flag | spec.rand ~= 15
+
+    gl0_1617935777_3/123/35.ivy: line 75: call beti.protein_interaction_0
+    {
+        gl0_1617935777_3/123/35.ivy: line 132: beti.protein := beti.protein + 10
+
+        [
+            beti.protein = 80
+        ]
+        gl0_1617935777_3/123/35.ivy: line 108: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 30 & beti.protein = 100 & hlyiir.protein = 70 & phlf.protein = 70 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl0_1617935777_3/123/35.ivy: line 39: assume err_flag | yfp.protein < 30
+
+    gl0_1617935777_3/123/35.ivy: line 44: a2 := a1
+
+    gl0_1617935777_3/123/35.ivy: line 45: b2 := b1
+
+    [
+        b2 = 70
+    ]
+    gl0_1617935777_3/123/35.ivy: line 46: h2 := h1
+
+    [
+        h2 = 70
+    ]
+    gl0_1617935777_3/123/35.ivy: line 47: p2 := p1
+
+    [
+        p2 = 70
+    ]
+    gl0_1617935777_3/123/35.ivy: line 48: y2 := y1
+
+    gl0_1617935777_3/123/35.ivy: line 49: a1 := a0
+
+    gl0_1617935777_3/123/35.ivy: line 50: b1 := b0
+
+    gl0_1617935777_3/123/35.ivy: line 51: h1 := h0
+
+    gl0_1617935777_3/123/35.ivy: line 52: p1 := p0
+
+    [
+        p1 = 80
+    ]
+    gl0_1617935777_3/123/35.ivy: line 53: y1 := y0
+
+    gl0_1617935777_3/123/35.ivy: line 54: a0 := amtr.protein
+
+    gl0_1617935777_3/123/35.ivy: line 55: b0 := beti.protein
+
+    [
+        b0 = 80
+    ]
+    gl0_1617935777_3/123/35.ivy: line 56: h0 := hlyiir.protein
+
+    gl0_1617935777_3/123/35.ivy: line 57: p0 := phlf.protein
+
+    gl0_1617935777_3/123/35.ivy: line 58: y0 := yfp.protein
+
+    gl0_1617935777_3/123/35.ivy: line 60: spec.rand := *
+
+    [
+        spec.rand = 5
+    ]
+    gl0_1617935777_3/123/35.ivy: line 61: assume err_flag | spec.rand ~= 15
+
+    gl0_1617935777_3/123/35.ivy: line 78: call beti.protein_interaction_1
+    {
+        gl0_1617935777_3/123/35.ivy: line 138: beti.protein := beti.protein + 10
+
+        [
+            beti.protein = 90
+        ]
+        gl0_1617935777_3/123/35.ivy: line 108: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 30 & beti.protein = 100 & hlyiir.protein = 70 & phlf.protein = 70 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl0_1617935777_3/123/35.ivy: line 39: assume err_flag | yfp.protein < 30
+
+    gl0_1617935777_3/123/35.ivy: line 44: a2 := a1
+
+    gl0_1617935777_3/123/35.ivy: line 45: b2 := b1
+
+    gl0_1617935777_3/123/35.ivy: line 46: h2 := h1
+
+    gl0_1617935777_3/123/35.ivy: line 47: p2 := p1
+
+    [
+        p2 = 80
+    ]
+    gl0_1617935777_3/123/35.ivy: line 48: y2 := y1
+
+    gl0_1617935777_3/123/35.ivy: line 49: a1 := a0
+
+    gl0_1617935777_3/123/35.ivy: line 50: b1 := b0
+
+    [
+        b1 = 80
+    ]
+    gl0_1617935777_3/123/35.ivy: line 51: h1 := h0
+
+    gl0_1617935777_3/123/35.ivy: line 52: p1 := p0
+
+    gl0_1617935777_3/123/35.ivy: line 53: y1 := y0
+
+    gl0_1617935777_3/123/35.ivy: line 54: a0 := amtr.protein
+
+    gl0_1617935777_3/123/35.ivy: line 55: b0 := beti.protein
+
+    [
+        b0 = 90
+    ]
+    gl0_1617935777_3/123/35.ivy: line 56: h0 := hlyiir.protein
+
+    gl0_1617935777_3/123/35.ivy: line 57: p0 := phlf.protein
+
+    gl0_1617935777_3/123/35.ivy: line 58: y0 := yfp.protein
+
+    gl0_1617935777_3/123/35.ivy: line 60: spec.rand := *
+
+    [
+        spec.rand = 13
+    ]
+    gl0_1617935777_3/123/35.ivy: line 61: assume err_flag | spec.rand ~= 15
+
+    gl0_1617935777_3/123/35.ivy: line 102: call yfp.protein_interaction_0
+    {
+        gl0_1617935777_3/123/35.ivy: line 132: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 10
+        ]
+        gl0_1617935777_3/123/35.ivy: line 108: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 30 & beti.protein = 100 & hlyiir.protein = 70 & phlf.protein = 70 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl0_1617935777_3/123/35.ivy: line 39: assume err_flag | yfp.protein < 30
+
+    gl0_1617935777_3/123/35.ivy: line 44: a2 := a1
+
+    gl0_1617935777_3/123/35.ivy: line 45: b2 := b1
+
+    [
+        b2 = 80
+    ]
+    gl0_1617935777_3/123/35.ivy: line 46: h2 := h1
+
+    gl0_1617935777_3/123/35.ivy: line 47: p2 := p1
+
+    gl0_1617935777_3/123/35.ivy: line 48: y2 := y1
+
+    gl0_1617935777_3/123/35.ivy: line 49: a1 := a0
+
+    gl0_1617935777_3/123/35.ivy: line 50: b1 := b0
+
+    [
+        b1 = 90
+    ]
+    gl0_1617935777_3/123/35.ivy: line 51: h1 := h0
+
+    gl0_1617935777_3/123/35.ivy: line 52: p1 := p0
+
+    gl0_1617935777_3/123/35.ivy: line 53: y1 := y0
+
+    gl0_1617935777_3/123/35.ivy: line 54: a0 := amtr.protein
+
+    gl0_1617935777_3/123/35.ivy: line 55: b0 := beti.protein
+
+    gl0_1617935777_3/123/35.ivy: line 56: h0 := hlyiir.protein
+
+    gl0_1617935777_3/123/35.ivy: line 57: p0 := phlf.protein
+
+    gl0_1617935777_3/123/35.ivy: line 58: y0 := yfp.protein
+
+    [
+        y0 = 10
+    ]
+    gl0_1617935777_3/123/35.ivy: line 60: spec.rand := *
+
+    [
+        spec.rand = 14
+    ]
+    gl0_1617935777_3/123/35.ivy: line 61: assume err_flag | spec.rand ~= 15
+
+    gl0_1617935777_3/123/35.ivy: line 105: call yfp.protein_interaction_1
+    {
+        gl0_1617935777_3/123/35.ivy: line 138: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 20
+        ]
+        gl0_1617935777_3/123/35.ivy: line 108: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 30 & beti.protein = 100 & hlyiir.protein = 70 & phlf.protein = 70 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl0_1617935777_3/123/35.ivy: line 39: assume err_flag | yfp.protein < 30
+
+    gl0_1617935777_3/123/35.ivy: line 44: a2 := a1
+
+    gl0_1617935777_3/123/35.ivy: line 45: b2 := b1
+
+    [
+        b2 = 90
+    ]
+    gl0_1617935777_3/123/35.ivy: line 46: h2 := h1
+
+    gl0_1617935777_3/123/35.ivy: line 47: p2 := p1
+
+    gl0_1617935777_3/123/35.ivy: line 48: y2 := y1
+
+    gl0_1617935777_3/123/35.ivy: line 49: a1 := a0
+
+    gl0_1617935777_3/123/35.ivy: line 50: b1 := b0
+
+    gl0_1617935777_3/123/35.ivy: line 51: h1 := h0
+
+    gl0_1617935777_3/123/35.ivy: line 52: p1 := p0
+
+    gl0_1617935777_3/123/35.ivy: line 53: y1 := y0
+
+    [
+        y1 = 10
+    ]
+    gl0_1617935777_3/123/35.ivy: line 54: a0 := amtr.protein
+
+    gl0_1617935777_3/123/35.ivy: line 55: b0 := beti.protein
+
+    gl0_1617935777_3/123/35.ivy: line 56: h0 := hlyiir.protein
+
+    gl0_1617935777_3/123/35.ivy: line 57: p0 := phlf.protein
+
+    gl0_1617935777_3/123/35.ivy: line 58: y0 := yfp.protein
+
+    [
+        y0 = 20
+    ]
+    gl0_1617935777_3/123/35.ivy: line 60: spec.rand := *
+
+    [
+        spec.rand = 4
+    ]
+    gl0_1617935777_3/123/35.ivy: line 61: assume err_flag | spec.rand ~= 15
+
+    gl0_1617935777_3/123/35.ivy: line 75: call beti.protein_interaction_0
+    {
+        gl0_1617935777_3/123/35.ivy: line 132: beti.protein := beti.protein + 10
+
+        [
+            beti.protein = 100
+        ]
+        gl0_1617935777_3/123/35.ivy: line 108: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 30 & beti.protein = 100 & hlyiir.protein = 70 & phlf.protein = 70 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl0_1617935777_3/123/35.ivy: line 39: assume err_flag | yfp.protein < 30
+
+    gl0_1617935777_3/123/35.ivy: line 44: a2 := a1
+
+    gl0_1617935777_3/123/35.ivy: line 45: b2 := b1
+
+    gl0_1617935777_3/123/35.ivy: line 46: h2 := h1
+
+    gl0_1617935777_3/123/35.ivy: line 47: p2 := p1
+
+    gl0_1617935777_3/123/35.ivy: line 48: y2 := y1
+
+    [
+        y2 = 10
+    ]
+    gl0_1617935777_3/123/35.ivy: line 49: a1 := a0
+
+    gl0_1617935777_3/123/35.ivy: line 50: b1 := b0
+
+    gl0_1617935777_3/123/35.ivy: line 51: h1 := h0
+
+    gl0_1617935777_3/123/35.ivy: line 52: p1 := p0
+
+    gl0_1617935777_3/123/35.ivy: line 53: y1 := y0
+
+    [
+        y1 = 20
+    ]
+    gl0_1617935777_3/123/35.ivy: line 54: a0 := amtr.protein
+
+    gl0_1617935777_3/123/35.ivy: line 55: b0 := beti.protein
+
+    [
+        b0 = 100
+    ]
+    gl0_1617935777_3/123/35.ivy: line 56: h0 := hlyiir.protein
+
+    gl0_1617935777_3/123/35.ivy: line 57: p0 := phlf.protein
+
+    gl0_1617935777_3/123/35.ivy: line 58: y0 := yfp.protein
+
+    gl0_1617935777_3/123/35.ivy: line 60: spec.rand := *
+
+    [
+        spec.rand = 14
+    ]
+    gl0_1617935777_3/123/35.ivy: line 61: assume err_flag | spec.rand ~= 15
+
+    gl0_1617935777_3/123/35.ivy: line 105: call yfp.protein_interaction_1
+    {
+        gl0_1617935777_3/123/35.ivy: line 138: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 30
+        ]
+        gl0_1617935777_3/123/35.ivy: line 108: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 30 & beti.protein = 100 & hlyiir.protein = 70 & phlf.protein = 70 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl0_1617935777_3/123/35.ivy: line 39: assume err_flag | yfp.protein < 30
+
+    gl0_1617935777_3/123/35.ivy: line 44: a2 := a1
+
+    gl0_1617935777_3/123/35.ivy: line 45: b2 := b1
+
+    gl0_1617935777_3/123/35.ivy: line 46: h2 := h1
+
+    gl0_1617935777_3/123/35.ivy: line 47: p2 := p1
+
+    gl0_1617935777_3/123/35.ivy: line 48: y2 := y1
+
+    [
+        y2 = 20
+    ]
+    gl0_1617935777_3/123/35.ivy: line 49: a1 := a0
+
+    gl0_1617935777_3/123/35.ivy: line 50: b1 := b0
+
+    [
+        b1 = 100
+    ]
+    gl0_1617935777_3/123/35.ivy: line 51: h1 := h0
+
+    gl0_1617935777_3/123/35.ivy: line 52: p1 := p0
+
+    gl0_1617935777_3/123/35.ivy: line 53: y1 := y0
+
+    gl0_1617935777_3/123/35.ivy: line 54: a0 := amtr.protein
+
+    gl0_1617935777_3/123/35.ivy: line 55: b0 := beti.protein
+
+    gl0_1617935777_3/123/35.ivy: line 56: h0 := hlyiir.protein
+
+    gl0_1617935777_3/123/35.ivy: line 57: p0 := phlf.protein
+
+    gl0_1617935777_3/123/35.ivy: line 58: y0 := yfp.protein
+
+    [
+        y0 = 30
+    ]
+    gl0_1617935777_3/123/35.ivy: line 60: spec.rand := *
+
+    [
+        spec.rand = 1
+    ]
+    gl0_1617935777_3/123/35.ivy: line 61: assume err_flag | spec.rand ~= 15
+
+    gl0_1617935777_3/123/35.ivy: line 66: call amtr.protein_interaction_0
+    {
+        gl0_1617935777_3/123/35.ivy: line 132: amtr.protein := amtr.protein + 10
+
+        [
+            amtr.protein = 10
+        ]
+        gl0_1617935777_3/123/35.ivy: line 108: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 30 & beti.protein = 100 & hlyiir.protein = 70 & phlf.protein = 70 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl0_1617935777_3/123/35.ivy: line 39: assume err_flag | yfp.protein < 30
+
+    gl0_1617935777_3/123/35.ivy: line 44: a2 := a1
+
+    gl0_1617935777_3/123/35.ivy: line 45: b2 := b1
+
+    [
+        b2 = 100
+    ]
+    gl0_1617935777_3/123/35.ivy: line 46: h2 := h1
+
+    gl0_1617935777_3/123/35.ivy: line 47: p2 := p1
+
+    gl0_1617935777_3/123/35.ivy: line 48: y2 := y1
+
+    gl0_1617935777_3/123/35.ivy: line 49: a1 := a0
+
+    gl0_1617935777_3/123/35.ivy: line 50: b1 := b0
+
+    gl0_1617935777_3/123/35.ivy: line 51: h1 := h0
+
+    gl0_1617935777_3/123/35.ivy: line 52: p1 := p0
+
+    gl0_1617935777_3/123/35.ivy: line 53: y1 := y0
+
+    [
+        y1 = 30
+    ]
+    gl0_1617935777_3/123/35.ivy: line 54: a0 := amtr.protein
+
+    [
+        a0 = 10
+    ]
+    gl0_1617935777_3/123/35.ivy: line 55: b0 := beti.protein
+
+    gl0_1617935777_3/123/35.ivy: line 56: h0 := hlyiir.protein
+
+    gl0_1617935777_3/123/35.ivy: line 57: p0 := phlf.protein
+
+    gl0_1617935777_3/123/35.ivy: line 58: y0 := yfp.protein
+
+    gl0_1617935777_3/123/35.ivy: line 60: spec.rand := *
+
+    gl0_1617935777_3/123/35.ivy: line 61: assume err_flag | spec.rand ~= 15
+
+    gl0_1617935777_3/123/35.ivy: line 66: call amtr.protein_interaction_0
+    {
+        gl0_1617935777_3/123/35.ivy: line 132: amtr.protein := amtr.protein + 10
+
+        [
+            amtr.protein = 20
+        ]
+        gl0_1617935777_3/123/35.ivy: line 108: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 30 & beti.protein = 100 & hlyiir.protein = 70 & phlf.protein = 70 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl0_1617935777_3/123/35.ivy: line 39: assume err_flag | yfp.protein < 30
+
+    gl0_1617935777_3/123/35.ivy: line 44: a2 := a1
+
+    gl0_1617935777_3/123/35.ivy: line 45: b2 := b1
+
+    gl0_1617935777_3/123/35.ivy: line 46: h2 := h1
+
+    gl0_1617935777_3/123/35.ivy: line 47: p2 := p1
+
+    gl0_1617935777_3/123/35.ivy: line 48: y2 := y1
+
+    [
+        y2 = 30
+    ]
+    gl0_1617935777_3/123/35.ivy: line 49: a1 := a0
+
+    [
+        a1 = 10
+    ]
+    gl0_1617935777_3/123/35.ivy: line 50: b1 := b0
+
+    gl0_1617935777_3/123/35.ivy: line 51: h1 := h0
+
+    gl0_1617935777_3/123/35.ivy: line 52: p1 := p0
+
+    gl0_1617935777_3/123/35.ivy: line 53: y1 := y0
+
+    gl0_1617935777_3/123/35.ivy: line 54: a0 := amtr.protein
+
+    [
+        a0 = 20
+    ]
+    gl0_1617935777_3/123/35.ivy: line 55: b0 := beti.protein
+
+    gl0_1617935777_3/123/35.ivy: line 56: h0 := hlyiir.protein
+
+    gl0_1617935777_3/123/35.ivy: line 57: p0 := phlf.protein
+
+    gl0_1617935777_3/123/35.ivy: line 58: y0 := yfp.protein
+
+    gl0_1617935777_3/123/35.ivy: line 60: spec.rand := *
+
+    [
+        spec.rand = 9
+    ]
+    gl0_1617935777_3/123/35.ivy: line 61: assume err_flag | spec.rand ~= 15
+
+    gl0_1617935777_3/123/35.ivy: line 90: call phlf.degradation_interaction
+    {
+        gl0_1617935777_3/123/35.ivy: line 126: phlf.protein := phlf.protein - 10
+
+        [
+            phlf.protein = 70
+        ]
+        gl0_1617935777_3/123/35.ivy: line 108: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 30 & beti.protein = 100 & hlyiir.protein = 70 & phlf.protein = 70 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl0_1617935777_3/123/35.ivy: line 39: assume err_flag | yfp.protein < 30
+
+    gl0_1617935777_3/123/35.ivy: line 44: a2 := a1
+
+    [
+        a2 = 10
+    ]
+    gl0_1617935777_3/123/35.ivy: line 45: b2 := b1
+
+    gl0_1617935777_3/123/35.ivy: line 46: h2 := h1
+
+    gl0_1617935777_3/123/35.ivy: line 47: p2 := p1
+
+    gl0_1617935777_3/123/35.ivy: line 48: y2 := y1
+
+    gl0_1617935777_3/123/35.ivy: line 49: a1 := a0
+
+    [
+        a1 = 20
+    ]
+    gl0_1617935777_3/123/35.ivy: line 50: b1 := b0
+
+    gl0_1617935777_3/123/35.ivy: line 51: h1 := h0
+
+    gl0_1617935777_3/123/35.ivy: line 52: p1 := p0
+
+    gl0_1617935777_3/123/35.ivy: line 53: y1 := y0
+
+    gl0_1617935777_3/123/35.ivy: line 54: a0 := amtr.protein
+
+    gl0_1617935777_3/123/35.ivy: line 55: b0 := beti.protein
+
+    gl0_1617935777_3/123/35.ivy: line 56: h0 := hlyiir.protein
+
+    gl0_1617935777_3/123/35.ivy: line 57: p0 := phlf.protein
+
+    [
+        p0 = 70
+    ]
+    gl0_1617935777_3/123/35.ivy: line 58: y0 := yfp.protein
+
+    gl0_1617935777_3/123/35.ivy: line 60: spec.rand := *
+
+    [
+        spec.rand = 1
+    ]
+    gl0_1617935777_3/123/35.ivy: line 61: assume err_flag | spec.rand ~= 15
+
+    gl0_1617935777_3/123/35.ivy: line 66: call amtr.protein_interaction_0
+    {
+        gl0_1617935777_3/123/35.ivy: line 132: amtr.protein := amtr.protein + 10
+
+        [
+            amtr.protein = 30
+        ]
+        gl0_1617935777_3/123/35.ivy: line 108: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 30 & beti.protein = 100 & hlyiir.protein = 70 & phlf.protein = 70 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl0_1617935777_3/123/35.ivy: line 39: assume err_flag | yfp.protein < 30
+
+    gl0_1617935777_3/123/35.ivy: line 44: a2 := a1
+
+    [
+        a2 = 20
+    ]
+    gl0_1617935777_3/123/35.ivy: line 45: b2 := b1
+
+    gl0_1617935777_3/123/35.ivy: line 46: h2 := h1
+
+    gl0_1617935777_3/123/35.ivy: line 47: p2 := p1
+
+    gl0_1617935777_3/123/35.ivy: line 48: y2 := y1
+
+    gl0_1617935777_3/123/35.ivy: line 49: a1 := a0
+
+    gl0_1617935777_3/123/35.ivy: line 50: b1 := b0
+
+    gl0_1617935777_3/123/35.ivy: line 51: h1 := h0
+
+    gl0_1617935777_3/123/35.ivy: line 52: p1 := p0
+
+    [
+        p1 = 70
+    ]
+    gl0_1617935777_3/123/35.ivy: line 53: y1 := y0
+
+    gl0_1617935777_3/123/35.ivy: line 54: a0 := amtr.protein
+
+    [
+        a0 = 30
+    ]
+    gl0_1617935777_3/123/35.ivy: line 55: b0 := beti.protein
+
+    gl0_1617935777_3/123/35.ivy: line 56: h0 := hlyiir.protein
+
+    gl0_1617935777_3/123/35.ivy: line 57: p0 := phlf.protein
+
+    gl0_1617935777_3/123/35.ivy: line 58: y0 := yfp.protein
+
+    gl0_1617935777_3/123/35.ivy: line 60: spec.rand := *
+
+    [
+        spec.rand = 14
+    ]
+    gl0_1617935777_3/123/35.ivy: line 61: assume err_flag | spec.rand ~= 15
+
+    gl0_1617935777_3/123/35.ivy: line 105: call yfp.protein_interaction_1
+    {
+        gl0_1617935777_3/123/35.ivy: line 138: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 40
+        ]
+        gl0_1617935777_3/123/35.ivy: line 108: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 30 & beti.protein = 100 & hlyiir.protein = 70 & phlf.protein = 70 & yfp.protein = 40)
+
+    }
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************

@@ -1,0 +1,13 @@
+a 0 b 70 h 70 p 70 y 0 _initial_state_
+a 0 b 60 h 70 p 70 y 0 _beti.degradation_interaction_
+a 0 b 50 h 70 p 70 y 0 _beti.degradation_interaction_
+a 0 b 50 h 60 p 70 y 0 _hlyiir.degradation_interaction_
+a 0 b 50 h 50 p 70 y 0 _hlyiir.degradation_interaction_
+a 0 b 50 h 40 p 70 y 0 _hlyiir.degradation_interaction_
+a 0 b 50 h 30 p 70 y 0 _hlyiir.degradation_interaction_
+a 10 b 50 h 30 p 70 y 0 _amtr.protein_interaction_0_
+a 10 b 50 h 30 p 70 y 10 _yfp.protein_interaction_0_
+a 10 b 50 h 30 p 70 y 20 _yfp.protein_interaction_0_
+a 10 b 50 h 30 p 70 y 30 _yfp.protein_interaction_0_
+a 10 b 60 h 30 p 70 y 30 _beti.protein_interaction_1_
+a 10 b 60 h 30 p 70 y 40 _yfp.protein_interaction_1_

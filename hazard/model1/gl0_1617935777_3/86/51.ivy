@@ -1,0 +1,150 @@
+#lang ivy1.7
+
+attribute method = mc
+
+#Note: work on labels as called actions
+
+type bv8
+interpret bv8 -> bv[8]
+
+var max : bv8
+
+var a0 : bv8
+var b0: bv8
+var h0 : bv8
+var p0 : bv8
+var y0 : bv8
+var a1 : bv8
+var b1: bv8
+var h1 : bv8
+var p1 : bv8
+var y1 : bv8
+var a2 : bv8
+var b2: bv8
+var h2 : bv8
+var p2 : bv8
+var y2 : bv8
+
+object spec = {
+  type bv4
+  interpret bv4 -> bv[4]
+  individual rand : bv4
+  
+  after init {
+    #set the max value for things
+    max := 100;
+  }
+  
+  before administrate {
+    require yfp.protein < 30
+  }
+  
+  action administrate = {
+
+    a2 := a1;
+    b2 := b1;
+    h2 := h1;
+    p2 := p1;
+    y2 := y1;
+    a1 := a0;
+    b1 := b0;
+    h1 := h0;
+    p1 := p0;
+    y1 := y0;
+    a0 := amtr.protein;
+    b0 := beti.protein;
+    h0 := hlyiir.protein;
+    p0 := phlf.protein;
+    y0 := yfp.protein;
+
+    rand := *;
+    assume rand ~= 15;
+    if rand = 0 {
+      call amtr.degradation_interaction
+    }
+    else if rand = 1 {
+      call amtr.protein_interaction_0
+    }
+    else if rand = 2 {
+      call amtr.protein_interaction_1
+    }
+    else if rand = 3 {
+      call beti.degradation_interaction
+    }
+    else if rand = 4 {
+      call beti.protein_interaction_0
+    }
+    else if rand = 5 {
+      call beti.protein_interaction_1
+    }
+    else if rand = 6 {
+      call hlyiir.degradation_interaction
+    }
+    else if rand = 7 {
+      call hlyiir.protein_interaction_0
+    }
+    else if rand = 8 {
+      call hlyiir.protein_interaction_1
+    }
+    else if rand = 9 {
+      call phlf.degradation_interaction
+    }
+    else if rand = 10 {
+      call phlf.protein_interaction_0
+    }
+    else if rand = 11 {
+      call phlf.protein_interaction_1
+    }
+    else if rand = 12 {
+      call yfp.degradation_interaction
+    }
+    else if rand = 13 {
+      call yfp.protein_interaction_0
+    }
+    else if rand = 14 {
+      call yfp.protein_interaction_1
+    };
+    
+    assume ~(yfp.protein < 30) -> (amtr.protein = 40 & beti.protein = 80 & hlyiir.protein = 60 & phlf.protein = 70 & yfp.protein = 40);    
+  } #end administrate
+  
+  export administrate
+  
+} #end sync
+
+
+module protein_module(x) = {
+
+  individual protein : bv8
+  
+  after init {
+    protein := x
+  }
+  
+  action degradation_interaction = {
+    if protein > 9 {
+      protein := protein - 10
+    }
+  } #end degradation_interaction
+  
+  action protein_interaction_0 = {
+    if protein <= (max - 10) {
+      protein := protein + 10
+    }
+  } #end protein_interaction_0
+  
+  action protein_interaction_1 = {
+    if protein <= (max - 10) {
+      protein := protein + 10
+    }
+  } #end protein_interaction_1
+  
+} #end protein_module
+
+instance amtr : protein_module(0)
+instance beti : protein_module(70)
+instance hlyiir : protein_module(70)
+instance phlf : protein_module(70)
+instance yfp : protein_module(0)
+
+invariant yfp.protein < 30 | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 20 & a2 = 40 & b2 = 80 & h2 = 60 & p2 = 70 & y2 = 10) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 30 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 30 & b2 = 80 & h2 = 60 & p2 = 70 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 50 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 50 & b2 = 80 & h2 = 60 & p2 = 70 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 90 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 90 & h2 = 60 & p2 = 70 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 70 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 80 & h2 = 70 & p2 = 70 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 50 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 80 & h2 = 50 & p2 = 70 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 60 & y1 = 30 & a2 = 40 & b2 = 80 & h2 = 60 & p2 = 60 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 70 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 70 & h2 = 60 & p2 = 70 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 80 & y1 = 30 & a2 = 40 & b2 = 80 & h2 = 60 & p2 = 80 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 20 & a2 = 30 & b2 = 80 & h2 = 60 & p2 = 70 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 20 & a2 = 50 & b2 = 80 & h2 = 60 & p2 = 70 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 30 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 20 & b2 = 80 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 20 & a2 = 40 & b2 = 70 & h2 = 60 & p2 = 70 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 90 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 100 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 20 & a2 = 40 & b2 = 80 & h2 = 70 & p2 = 70 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 50 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 60 & b2 = 80 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 90 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 30 & b2 = 90 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 20 & a2 = 40 & b2 = 80 & h2 = 50 & p2 = 70 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 50 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 80 & h2 = 40 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 70 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 60 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 20 & a2 = 40 & b2 = 90 & h2 = 60 & p2 = 70 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 20 & a2 = 40 & b2 = 80 & h2 = 60 & p2 = 60 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 70 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 80 & h2 = 80 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 20 & a2 = 40 & b2 = 80 & h2 = 60 & p2 = 80 & y2 = 20) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 20 & a2 = 40 & b2 = 80 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 50 & p1 = 70 & y1 = 30 & a2 = 30 & b2 = 80 & h2 = 50 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 50 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 70 & h2 = 50 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 50 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 80 & h2 = 50 & p2 = 80 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 60 & y1 = 30 & a2 = 40 & b2 = 90 & h2 = 60 & p2 = 60 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 50 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 80 & h2 = 50 & p2 = 60 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 50 & p1 = 70 & y1 = 30 & a2 = 50 & b2 = 80 & h2 = 50 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 80 & y1 = 30 & a2 = 40 & b2 = 80 & h2 = 60 & p2 = 90 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 30 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 80 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 70 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 50 & b2 = 70 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 70 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 30 & b2 = 70 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 50 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 80 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 90 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 50 & b2 = 90 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 60 & y1 = 30 & a2 = 40 & b2 = 80 & h2 = 60 & p2 = 50 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 90 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 90 & h2 = 70 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 60 & y1 = 30 & a2 = 40 & b2 = 70 & h2 = 60 & p2 = 60 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 70 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 70 & h2 = 70 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 30 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 30 & b2 = 70 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 50 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 50 & b2 = 70 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 70 & p1 = 70 & y1 = 30 & a2 = 30 & b2 = 80 & h2 = 70 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 70 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 70 & h2 = 60 & p2 = 80 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 30 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 30 & b2 = 90 & h2 = 60 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 50 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 50 & b2 = 80 & h2 = 70 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 60 & y1 = 30 & a2 = 30 & b2 = 80 & h2 = 60 & p2 = 60 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 70 & p1 = 70 & y1 = 30 & a2 = 40 & b2 = 70 & h2 = 70 & p2 = 70 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 30 & b1 = 80 & h1 = 60 & p1 = 70 & y1 = 30 & a2 = 30 & b2 = 80 & h2 = 60 & p2 = 80 & y2 = 30) | (a0 = 40 & b0 = 80 & h0 = 60 & p0 = 70 & y0 = 30 & a1 = 40 & b1 = 80 & h1 = 60 & p1 = 60 & y1 = 30 & a2 = 50 & b2 = 80 & h2 = 60 & p2 = 60 & y2 = 30)

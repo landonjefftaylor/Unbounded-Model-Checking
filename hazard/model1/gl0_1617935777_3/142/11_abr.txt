@@ -1,0 +1,9 @@
+a 0 b 70 h 70 p 70 y 0 _initial_state_
+a 0 b 70 h 70 p 80 y 0 _phlf.protein_interaction_1_
+a 0 b 70 h 70 p 90 y 0 _phlf.protein_interaction_0_
+a 10 b 70 h 70 p 90 y 0 _amtr.protein_interaction_1_
+a 10 b 70 h 70 p 90 y 10 _yfp.protein_interaction_1_
+a 10 b 70 h 70 p 90 y 20 _yfp.protein_interaction_1_
+a 0 b 70 h 70 p 90 y 20 _amtr.degradation_interaction_
+a 0 b 70 h 70 p 90 y 30 _yfp.protein_interaction_0_
+a 0 b 70 h 70 p 90 y 40 _yfp.protein_interaction_0_
