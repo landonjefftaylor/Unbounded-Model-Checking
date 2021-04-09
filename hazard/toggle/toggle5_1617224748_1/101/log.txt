@@ -1,0 +1,2 @@
+Testing endpoint tetr=77 and laci=19
+t0 = 77 ; l0 = 20

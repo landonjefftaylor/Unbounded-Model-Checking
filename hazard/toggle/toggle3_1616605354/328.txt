@@ -1,0 +1,891 @@
+
+Isolate this:
+
+********************************************************************************
+
+toggle3_1616605354/328.ivy: line 98: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpPSegAO.aig; pdr; write_aiger_cex  /tmp/tmpPSegAO.out".
+
+Output 0 of miter "/tmp/tmpPSegAO" was asserted in frame 35.  Time =     0.09 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+err_flag := false
+
+toggle3_1616605354/328.ivy: line 36: tetr_def.tetr := 0:bv8
+
+[
+    tetr_def.tetr = 0
+]
+toggle3_1616605354/328.ivy: line 70: laci_def.laci := 60:bv8
+
+[
+    laci_def.laci = 60
+]
+__init := true
+
+[
+    rand = false
+]
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 70
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 80
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 90
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 100
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 110
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 120
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 130
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 140
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 150
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 160
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 170
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 180
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 190
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 43: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 10
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 54: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 20
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 200
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 210
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 220
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 54: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 30
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 57: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 29
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = true
+    ]
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 57: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 28
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = true
+    ]
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 57: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 27
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = true
+    ]
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 57: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 26
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = true
+    ]
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 57: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 25
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = true
+    ]
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 57: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 24
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = true
+    ]
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 57: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 23
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 230
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 240
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    [
+        rand = false
+    ]
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 250
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 54: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 33
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 54: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 43
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 54: tetr_def.tetr := tetr_def.tetr + 10
+
+        [
+            tetr_def.tetr = 53
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    toggle3_1616605354/328.ivy: line 19: call tetr_def.update_tetr
+    {
+        toggle3_1616605354/328.ivy: line 40: rand := *
+
+        toggle3_1616605354/328.ivy: line 57: tetr_def.tetr := tetr_def.tetr - 1
+
+        [
+            rand = false
+            tetr_def.tetr = 52
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    toggle3_1616605354/328.ivy: line 13: assume err_flag | ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+
+    toggle3_1616605354/328.ivy: line 17: rand := *
+
+    toggle3_1616605354/328.ivy: line 22: call laci_def.update_laci
+    {
+        toggle3_1616605354/328.ivy: line 74: rand := *
+
+        toggle3_1616605354/328.ivy: line 87: laci_def.laci := laci_def.laci + 10
+
+        [
+            rand = true
+            laci_def.laci = 4
+        ]
+    }
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************

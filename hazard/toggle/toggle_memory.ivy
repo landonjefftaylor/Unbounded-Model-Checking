@@ -1,0 +1,121 @@
+#lang ivy1.7
+
+attribute method = mc
+
+type bv8
+interpret bv8 -> bv[8]
+
+type bv5
+interpret bv5 -> bv[2]
+
+var rand : bool
+var curr_state : bv5
+
+object spec = {
+
+  after init {
+    rand := *;
+    curr_state := 1;
+  } #init
+
+  action administrate = {
+    rand := *;
+    if rand {
+      require tetr_def.tetr < 255;
+      call tetr_def.update_tetr;
+    }
+    else {
+      require laci_def.laci < 255;
+      call laci_def.update_laci;
+    };
+    if curr_state >= 1 {
+      # call mem(curr_state).save_curr_state;
+      mem(curr_state).stetr := tetr_def.tetr;
+      mem(curr_state).slaci := laci_def.laci;
+      curr_state := curr_state + 1;
+    };
+  } #end administrate
+  
+  export administrate
+
+} #end spec
+
+
+object tetr_def = {
+  
+  var tetr : bv8
+  
+  after init {
+    tetr := 0;
+    rand := *;
+  }
+  
+  action update_tetr = {
+    rand := *;
+    if (tetr = 0) {
+      if rand {
+        tetr := tetr + 10
+      }
+    }
+    else if tetr > 0 {
+      if rand {
+        tetr := tetr + 10
+      }
+      else {
+        tetr := tetr - 1
+      }
+    };
+  } #end update_tetr
+  
+  # export update_tetr
+  
+} #end tetr_def
+
+
+object laci_def = {
+  
+  var laci : bv8
+  
+  after init {
+    laci := 60;
+    rand := *;
+  }
+  
+  action update_laci = {
+    rand := *;
+    if laci = 0 {
+      if rand {
+        laci := laci + 10
+      }
+    }
+    else if laci > 0 {
+      if rand {
+        laci := laci + 10
+      }
+      else {
+        laci := laci - 1
+      }
+    };
+  } #end update_laci
+  
+  # export update_laci
+  
+} #end tetR_def
+
+module rememberer = {
+  
+  individual stetr : bv8
+  individual slaci : bv8
+  
+  # action save_curr_state = {
+    # stetr := tetr_def.tetr;
+    # slaci := laci_def.laci;
+  # } #end save_curr_state
+  
+} #end rememberer
+
+instance mem(X:bv5) : rememberer
+
+
+invariant ~(laci_def.laci < 20 & tetr_def.tetr > 40)
+# invariant ~(laci_def.laci < 50 & tetr_def.tetr > 10)

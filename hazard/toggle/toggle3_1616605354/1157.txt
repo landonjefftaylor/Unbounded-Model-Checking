@@ -1,0 +1,16 @@
+
+Isolate this:
+
+********************************************************************************
+
+toggle3_1616605354/1157.ivy: line 98: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpoW9_wo.aig; pdr; write_aiger_cex  /tmp/tmpoW9_wo.out".
+
+Output 0 of miter "/tmp/tmpoW9_wo" was as
