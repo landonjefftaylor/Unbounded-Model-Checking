@@ -1,0 +1,16 @@
+
+Isolate this:
+
+********************************************************************************
+
+This version has been modified by Landon Taylor. landon.taylor@aggiemail.usu.edu
+The ABCModelChecker function is using 'pdr -q'. For more info, 
+
+
+install abc, and on the command line use 'abc' > 'pdr --help'
+t_pdrq_1618951982_0/337.ivy: line 101: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+aigtoaig_path:/usr/local/lib/

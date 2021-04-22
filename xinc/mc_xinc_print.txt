@@ -1,0 +1,104 @@
+
+Isolate this:
+
+********************************************************************************
+
+This version has been modified by Landon Taylor. landon.taylor@aggiemail.usu.edu
+
+
+mc_xinc.ivy: line 23: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+aigtoaig_path:/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/aigtoaig
+abc_path: /usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc
+using cmd ['/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc', '-c', 'read_aiger /tmp/tmpRIutNU.aig; pdr; write_aiger_cex  /tmp/tmpRIutNU.out']
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmpRIutNU.aig; pdr; write_aiger_cex  /tmp/tmpRIutNU.out".
+
+Output 0 of miter "/tmp/tmpRIutNU" was asserted in frame 6.  Time =     0.01 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+err_flag := false
+
+mc_xinc.ivy: line 14: test.x := 0:t
+
+[
+    test.x = 0
+]
+__init := true
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 1
+    ]
+}
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 2
+    ]
+}
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 3
+    ]
+}
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 4
+    ]
+}
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 5
+    ]
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************

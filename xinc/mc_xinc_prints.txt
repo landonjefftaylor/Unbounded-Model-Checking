@@ -1,0 +1,12 @@
+
+Isolate this:
+
+********************************************************************************
+
+mc_xinc.ivy: line 23: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+aigtoaig_path:/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/aigtoaig
+error: failed to run aigtoaig
