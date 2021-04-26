@@ -1,0 +1,13 @@
+ 124 steps in test    0 (badness    0 )
+ 124 steps in test    1 (badness    0 )
+ 124 steps in test    2 (badness    0 )
+ 124 steps in test    3 (badness    0 )
+ 124 steps in test    4 (badness    0 )
+ 124 steps in test    5 (badness    0 )
+ 124 steps in test    6 (badness    0 )
+ 124 steps in test    8 (badness    1 )
+ 146 steps in test    7 (badness    1 )
+
+
+Badness total:          2
+Badness average:        0

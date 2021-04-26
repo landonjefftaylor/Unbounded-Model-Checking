@@ -1,0 +1,253 @@
+
+Isolate this:
+
+********************************************************************************
+
+This version has been modified by Landon Taylor. landon.taylor@aggiemail.usu.edu
+The ABCModelChecker function is using 'pdr -qvwt'. For more info, 
+
+
+install abc, and on the command line use 'abc' > 'pdr --help'
+mc_xinc.ivy: line 23: Model checking invariant
+
+Instantiating quantifiers (see ivy_mc.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+aigtoaig_path:/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/aigtoaig
+abc_path: /usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc
+using cmd ['/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc', '-c', 'read_aiger /tmp/tmp_vZgNz.aig; pdr -qvwt; write_aiger_cex  /tmp/tmp_vZgNz.out']
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger /tmp/tmp_vZgNz.aig; pdr -qvwt; write_aiger_cex  /tmp/tmp_vZgNz.out".
+
+VarMax = 300. FrameMax = 10000. QueMax = 0. TimeMax = 0. MonoCNF = no. SkipGen = no. SolveAll = no.
+Frame Clauses                                                     Max Queue Flops Cex      Time
+Trying to justify cube <prop=fail> in frame 1.
+-------101010
+-------101010
+Trying to justify cube <prop=fail> in frame 1.
+-------101010
+-------101010
+Cube:
+6 
+Adding cube ---1--- to frame 1.
+  1 : 0 1                                                                 1     1   1      0.00 sec
+Trying to justify cube <prop=fail> in frame 2.
+-------101010
+-------101010
+Trying to justify cube ---1--- in frame 1.
+-000---1-011-
+-000---1-011-
+Trying to justify cube <prop=fail> in frame 2.
+-------101010
+-------101010
+Cube:
+6 10 
+Adding cube ---1-1- to frame 2.
+  2 : 0 1 1                                                               2     2   1      0.00 sec
+Trying to justify cube <prop=fail> in frame 3.
+-------101010
+-------101010
+Trying to justify cube ---1-1- in frame 2.
+-000---1-100-
+-000---1-1x0-
+Trying to justify cube ---1-0- in frame 1.
+-000---1-011-
+-000---1-011-
+Cube:
+10 
+Adding cube -----1- to frame 1.
+Cube:
+6 
+Adding cube ---1--- to frame 2.
+Cube:
+6 10 
+Adding cube ---1-1- to frame 3.
+  3 : 0 2 2 1                                                             3     2   0      0.00 sec
+Trying to justify cube <prop=fail> in frame 4.
+-------101010
+-------101010
+Trying to justify cube ---1-1- in frame 3.
+-000---1-110-
+-000---1-1x0-
+Trying to justify cube ---1-0- in frame 2.
+-000---1-011-
+-000---1-011-
+Trying to justify cube ---0-1- in frame 1.
+-000---1-010-
+-000---1-0x0-
+Trying to justify cube <prop=fail> in frame 4.
+-------101010
+-------101010
+Trying to justify cube -101010 in frame 3.
+0000---101000
+0000---101000
+Trying to justify cube -101000 in frame 2.
+0000---100110
+0000---100110
+Trying to justify cube -100110 in frame 1.
+0000---100100
+0000---100100
+Cube:
+8 
+Adding cube ----1-- to frame 2.
+Cube:
+6 
+Adding cube ---1--- to frame 3.
+Cube:
+6 10 
+Adding cube ---1-1- to frame 4.
+  4 : 0 1 2 2 1                                                           4     3   1      0.00 sec
+Trying to justify cube <prop=fail> in frame 5.
+-------101010
+-------101010
+Trying to justify cube ---101- in frame 4.
+-000---1-100-
+-000---1-100-
+Trying to justify cube ---100- in frame 3.
+-000---1-011-
+-000---1-011-
+Cube:
+8 10 
+Adding cube ----11- to frame 3.
+Cube:
+6 
+Adding cube ---1--- to frame 4.
+Cube:
+6 10 
+Adding cube ---1-1- to frame 5.
+  5 : 0 1 1 2 2 1                                                         3     3   0      0.01 sec
+Trying to justify cube <prop=fail> in frame 6.
+-------101010
+-------101010
+Trying to justify cube ---101- in frame 5.
+-000---1-100-
+-000---1-100-
+Trying to justify cube ---100- in frame 4.
+-000---1-011-
+-000---1-011-
+Trying to justify cube ---011- in frame 3.
+-000---1-010-
+-000---1-010-
+Trying to justify cube ---010- in frame 2.
+-000---1-001-
+-000---1-001-
+Trying to justify cube ---001- in frame 1.
+-000---1-000-
+-000---1-000-
+Trying to justify cube <prop=fail> in frame 6.
+-------101010
+-------101010
+Trying to justify cube -101010 in frame 5.
+0000---101000
+0000---101000
+Trying to justify cube -101000 in frame 4.
+0000---100110
+0000---100110
+Trying to justify cube -100110 in frame 3.
+0000---100100
+0000---100100
+Trying to justify cube -100100 in frame 2.
+0000---100010
+0000---100010
+Trying to justify cube -100010 in frame 1.
+0000---100000
+0000---100000
+Trying to justify cube -100000 in frame 0.
+0000---000000
+0000---0xxxx0
+Block =   10  Oblig =    54  Clause =    11  Call =    84 (sat=75.0%)  Cex =   4  Start =   0
+SAT solving =     0.00 sec (  9.17 %)
+  unsat     =     0.00 sec (  0.16 %)
+  sat       =     0.00 sec (  9.02 %)
+Generalize  =     0.00 sec (  6.32 %)
+Push clause =     0.00 sec (  2.91 %)
+Ternary sim =     0.00 sec (  1.27 %)
+Containment =     0.00 sec (  0.05 %)
+CNF compute =     0.00 sec (  0.79 %)
+Refinement  =     0.00 sec (  0.67 %)
+TOTAL       =     0.02 sec (100.00 %)
+Output 0 of miter "/tmp/tmp_vZgNz" was asserted in frame 6.  Time =     0.02 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+err_flag := false
+
+mc_xinc.ivy: line 14: test.x := 0:t
+
+[
+    test.x = 0
+]
+__init := true
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 1
+    ]
+}
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 2
+    ]
+}
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 3
+    ]
+}
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 4
+    ]
+}
+
+err_flag := false
+
+call ext:test.transition
+
+{
+    mc_xinc.ivy: line 18: test.x := test.x + 1
+
+    [
+        test.x = 5
+    ]
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************
