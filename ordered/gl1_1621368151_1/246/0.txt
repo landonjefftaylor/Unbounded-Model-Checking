@@ -1,0 +1,458 @@
+
+Isolate this:
+
+********************************************************************************
+
+This version has been modified by Landon Taylor. landon.taylor@aggiemail.usu.edu
+The ABCModelChecker function is using 'pdr -qt -L pdr_log.txt'. For more info, 
+
+
+install abc, and on the command line use 'abc' > 'pdr --help'
+gl1_1621368151_1/246/0.ivy: line 139: Model checking invariant
+
+Instantiating quantifiers (see logfiles/ivy_mc_1621378207.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+file name: aigerfiles/1621378207.aag
+aigtoaig_path:/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/aigtoaig
+abc_path: /usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc
+using cmd ['/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc', '-c', 'read_aiger aigerfiles/1621378207.aig; pdr -qt -L aigerfiles/1621378207_pdr.log; write_aiger_cex  aigerfiles/1621378207.out']
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger aigerfiles/1621378207.aig; pdr -qt -L aigerfiles/1621378207_pdr.log; write_aiger_cex  aigerfiles/1621378207.out".
+
+Output 0 of miter "aigerfiles/1621378207" was asserted in frame 10.  Time =     0.65 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+err_flag := false
+
+gl1_1621368151_1/246/0.ivy: line 25: max := 100:bv8
+
+[
+    max = 100
+]
+gl1_1621368151_1/246/0.ivy: line 116: amtr.protein := 0:bv8
+
+[
+    amtr.protein = 0
+]
+gl1_1621368151_1/246/0.ivy: line 116: beti.protein := 70:bv8
+
+[
+    beti.protein = 70
+]
+gl1_1621368151_1/246/0.ivy: line 116: hlyiir.protein := 70:bv8
+
+[
+    hlyiir.protein = 70
+]
+gl1_1621368151_1/246/0.ivy: line 116: phlf.protein := 70:bv8
+
+[
+    phlf.protein = 70
+]
+gl1_1621368151_1/246/0.ivy: line 116: yfp.protein := 0:bv8
+
+[
+    yfp.protein = 0
+]
+__init := true
+
+[
+    spec.rand = 0
+    b0 = 0
+    p0 = 0
+    a0 = 0
+    h0 = 0
+    y0 = 0
+]
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/246/0.ivy: line 29: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/246/0.ivy: line 34: a0 := amtr.protein
+
+    gl1_1621368151_1/246/0.ivy: line 35: b0 := beti.protein
+
+    [
+        b0 = 70
+    ]
+    gl1_1621368151_1/246/0.ivy: line 36: h0 := hlyiir.protein
+
+    [
+        h0 = 70
+    ]
+    gl1_1621368151_1/246/0.ivy: line 37: p0 := phlf.protein
+
+    [
+        p0 = 70
+    ]
+    gl1_1621368151_1/246/0.ivy: line 38: y0 := yfp.protein
+
+    gl1_1621368151_1/246/0.ivy: line 40: spec.rand := *
+
+    [
+        spec.rand = 5
+    ]
+    gl1_1621368151_1/246/0.ivy: line 41: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/246/0.ivy: line 63: assume err_flag | beti.protein <= max - 10
+
+    gl1_1621368151_1/246/0.ivy: line 64: call beti.protein_interaction_1
+    {
+        gl1_1621368151_1/246/0.ivy: line 128: beti.protein := beti.protein + 10
+
+        [
+            beti.protein = 80
+        ]
+        gl1_1621368151_1/246/0.ivy: line 103: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 0 & beti.protein = 100 & hlyiir.protein = 60 & phlf.protein = 60 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/246/0.ivy: line 29: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/246/0.ivy: line 34: a0 := amtr.protein
+
+    gl1_1621368151_1/246/0.ivy: line 35: b0 := beti.protein
+
+    [
+        b0 = 80
+    ]
+    gl1_1621368151_1/246/0.ivy: line 36: h0 := hlyiir.protein
+
+    gl1_1621368151_1/246/0.ivy: line 37: p0 := phlf.protein
+
+    gl1_1621368151_1/246/0.ivy: line 38: y0 := yfp.protein
+
+    gl1_1621368151_1/246/0.ivy: line 40: spec.rand := *
+
+    [
+        spec.rand = 4
+    ]
+    gl1_1621368151_1/246/0.ivy: line 41: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/246/0.ivy: line 59: assume err_flag | beti.protein <= max - 10
+
+    gl1_1621368151_1/246/0.ivy: line 60: call beti.protein_interaction_0
+    {
+        gl1_1621368151_1/246/0.ivy: line 124: beti.protein := beti.protein + 10
+
+        [
+            beti.protein = 90
+        ]
+        gl1_1621368151_1/246/0.ivy: line 103: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 0 & beti.protein = 100 & hlyiir.protein = 60 & phlf.protein = 60 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/246/0.ivy: line 29: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/246/0.ivy: line 34: a0 := amtr.protein
+
+    gl1_1621368151_1/246/0.ivy: line 35: b0 := beti.protein
+
+    [
+        b0 = 90
+    ]
+    gl1_1621368151_1/246/0.ivy: line 36: h0 := hlyiir.protein
+
+    gl1_1621368151_1/246/0.ivy: line 37: p0 := phlf.protein
+
+    gl1_1621368151_1/246/0.ivy: line 38: y0 := yfp.protein
+
+    gl1_1621368151_1/246/0.ivy: line 40: spec.rand := *
+
+    [
+        spec.rand = 9
+    ]
+    gl1_1621368151_1/246/0.ivy: line 41: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/246/0.ivy: line 79: assume err_flag | phlf.protein > 9
+
+    gl1_1621368151_1/246/0.ivy: line 80: call phlf.degradation_interaction
+    {
+        gl1_1621368151_1/246/0.ivy: line 120: phlf.protein := phlf.protein - 10
+
+        [
+            phlf.protein = 60
+        ]
+        gl1_1621368151_1/246/0.ivy: line 103: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 0 & beti.protein = 100 & hlyiir.protein = 60 & phlf.protein = 60 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/246/0.ivy: line 29: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/246/0.ivy: line 34: a0 := amtr.protein
+
+    gl1_1621368151_1/246/0.ivy: line 35: b0 := beti.protein
+
+    gl1_1621368151_1/246/0.ivy: line 36: h0 := hlyiir.protein
+
+    gl1_1621368151_1/246/0.ivy: line 37: p0 := phlf.protein
+
+    [
+        p0 = 60
+    ]
+    gl1_1621368151_1/246/0.ivy: line 38: y0 := yfp.protein
+
+    gl1_1621368151_1/246/0.ivy: line 40: spec.rand := *
+
+    [
+        spec.rand = 6
+    ]
+    gl1_1621368151_1/246/0.ivy: line 41: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/246/0.ivy: line 67: assume err_flag | hlyiir.protein > 9
+
+    gl1_1621368151_1/246/0.ivy: line 68: call hlyiir.degradation_interaction
+    {
+        gl1_1621368151_1/246/0.ivy: line 120: hlyiir.protein := hlyiir.protein - 10
+
+        [
+            hlyiir.protein = 60
+        ]
+        gl1_1621368151_1/246/0.ivy: line 103: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 0 & beti.protein = 100 & hlyiir.protein = 60 & phlf.protein = 60 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/246/0.ivy: line 29: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/246/0.ivy: line 34: a0 := amtr.protein
+
+    gl1_1621368151_1/246/0.ivy: line 35: b0 := beti.protein
+
+    gl1_1621368151_1/246/0.ivy: line 36: h0 := hlyiir.protein
+
+    [
+        h0 = 60
+    ]
+    gl1_1621368151_1/246/0.ivy: line 37: p0 := phlf.protein
+
+    gl1_1621368151_1/246/0.ivy: line 38: y0 := yfp.protein
+
+    gl1_1621368151_1/246/0.ivy: line 40: spec.rand := *
+
+    [
+        spec.rand = 14
+    ]
+    gl1_1621368151_1/246/0.ivy: line 41: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/246/0.ivy: line 99: assume err_flag | yfp.protein <= max - 10
+
+    gl1_1621368151_1/246/0.ivy: line 100: call yfp.protein_interaction_1
+    {
+        gl1_1621368151_1/246/0.ivy: line 128: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 10
+        ]
+        gl1_1621368151_1/246/0.ivy: line 103: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 0 & beti.protein = 100 & hlyiir.protein = 60 & phlf.protein = 60 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/246/0.ivy: line 29: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/246/0.ivy: line 34: a0 := amtr.protein
+
+    gl1_1621368151_1/246/0.ivy: line 35: b0 := beti.protein
+
+    gl1_1621368151_1/246/0.ivy: line 36: h0 := hlyiir.protein
+
+    gl1_1621368151_1/246/0.ivy: line 37: p0 := phlf.protein
+
+    gl1_1621368151_1/246/0.ivy: line 38: y0 := yfp.protein
+
+    [
+        y0 = 10
+    ]
+    gl1_1621368151_1/246/0.ivy: line 40: spec.rand := *
+
+    gl1_1621368151_1/246/0.ivy: line 41: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/246/0.ivy: line 99: assume err_flag | yfp.protein <= max - 10
+
+    gl1_1621368151_1/246/0.ivy: line 100: call yfp.protein_interaction_1
+    {
+        gl1_1621368151_1/246/0.ivy: line 128: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 20
+        ]
+        gl1_1621368151_1/246/0.ivy: line 103: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 0 & beti.protein = 100 & hlyiir.protein = 60 & phlf.protein = 60 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/246/0.ivy: line 29: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/246/0.ivy: line 34: a0 := amtr.protein
+
+    gl1_1621368151_1/246/0.ivy: line 35: b0 := beti.protein
+
+    gl1_1621368151_1/246/0.ivy: line 36: h0 := hlyiir.protein
+
+    gl1_1621368151_1/246/0.ivy: line 37: p0 := phlf.protein
+
+    gl1_1621368151_1/246/0.ivy: line 38: y0 := yfp.protein
+
+    [
+        y0 = 20
+    ]
+    gl1_1621368151_1/246/0.ivy: line 40: spec.rand := *
+
+    [
+        spec.rand = 5
+    ]
+    gl1_1621368151_1/246/0.ivy: line 41: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/246/0.ivy: line 63: assume err_flag | beti.protein <= max - 10
+
+    gl1_1621368151_1/246/0.ivy: line 64: call beti.protein_interaction_1
+    {
+        gl1_1621368151_1/246/0.ivy: line 128: beti.protein := beti.protein + 10
+
+        [
+            beti.protein = 100
+        ]
+        gl1_1621368151_1/246/0.ivy: line 103: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 0 & beti.protein = 100 & hlyiir.protein = 60 & phlf.protein = 60 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/246/0.ivy: line 29: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/246/0.ivy: line 34: a0 := amtr.protein
+
+    gl1_1621368151_1/246/0.ivy: line 35: b0 := beti.protein
+
+    [
+        b0 = 100
+    ]
+    gl1_1621368151_1/246/0.ivy: line 36: h0 := hlyiir.protein
+
+    gl1_1621368151_1/246/0.ivy: line 37: p0 := phlf.protein
+
+    gl1_1621368151_1/246/0.ivy: line 38: y0 := yfp.protein
+
+    gl1_1621368151_1/246/0.ivy: line 40: spec.rand := *
+
+    [
+        spec.rand = 14
+    ]
+    gl1_1621368151_1/246/0.ivy: line 41: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/246/0.ivy: line 99: assume err_flag | yfp.protein <= max - 10
+
+    gl1_1621368151_1/246/0.ivy: line 100: call yfp.protein_interaction_1
+    {
+        gl1_1621368151_1/246/0.ivy: line 128: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 30
+        ]
+        gl1_1621368151_1/246/0.ivy: line 103: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 0 & beti.protein = 100 & hlyiir.protein = 60 & phlf.protein = 60 & yfp.protein = 40)
+
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/246/0.ivy: line 29: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/246/0.ivy: line 34: a0 := amtr.protein
+
+    gl1_1621368151_1/246/0.ivy: line 35: b0 := beti.protein
+
+    gl1_1621368151_1/246/0.ivy: line 36: h0 := hlyiir.protein
+
+    gl1_1621368151_1/246/0.ivy: line 37: p0 := phlf.protein
+
+    gl1_1621368151_1/246/0.ivy: line 38: y0 := yfp.protein
+
+    [
+        y0 = 30
+    ]
+    gl1_1621368151_1/246/0.ivy: line 40: spec.rand := *
+
+    gl1_1621368151_1/246/0.ivy: line 41: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/246/0.ivy: line 99: assume err_flag | yfp.protein <= max - 10
+
+    gl1_1621368151_1/246/0.ivy: line 100: call yfp.protein_interaction_1
+    {
+        gl1_1621368151_1/246/0.ivy: line 128: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 40
+        ]
+        gl1_1621368151_1/246/0.ivy: line 103: assume err_flag | (~yfp.protein < 30 -> amtr.protein = 0 & beti.protein = 100 & hlyiir.protein = 60 & phlf.protein = 60 & yfp.protein = 40)
+
+    }
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************

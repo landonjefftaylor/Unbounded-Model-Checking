@@ -1,0 +1,4 @@
+Result Notes:
+
+- Of 1000 tests, 1000 traces were unique
+- Traces printed in shortest-to-longest order

@@ -1,0 +1,372 @@
+
+Isolate this:
+
+********************************************************************************
+
+This version has been modified by Landon Taylor. landon.taylor@aggiemail.usu.edu
+The ABCModelChecker function is using 'pdr -qt -L pdr_log.txt'. For more info, 
+
+
+install abc, and on the command line use 'abc' > 'pdr --help'
+gl1_1621368151_1/879.ivy: line 127: Model checking invariant
+
+Instantiating quantifiers (see logfiles/ivy_mc_1621457634.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+file name: aigerfiles/1621457634.aag
+aigtoaig_path:/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/aigtoaig
+abc_path: /usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc
+using cmd ['/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc', '-c', 'read_aiger aigerfiles/1621457634.aig; pdr -qt -L aigerfiles/1621457634_pdr.log; write_aiger_cex  aigerfiles/1621457634.out']
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger aigerfiles/1621457634.aig; pdr -qt -L aigerfiles/1621457634_pdr.log; write_aiger_cex  aigerfiles/1621457634.out".
+
+Output 0 of miter "aigerfiles/1621457634" was asserted in frame 12.  Time =   132.56 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+err_flag := false
+
+gl1_1621368151_1/879.ivy: line 19: max := 100:bv8
+
+[
+    max = 100
+]
+gl1_1621368151_1/879.ivy: line 104: amtr.protein := 0:bv8
+
+[
+    amtr.protein = 0
+]
+gl1_1621368151_1/879.ivy: line 104: beti.protein := 70:bv8
+
+[
+    beti.protein = 70
+]
+gl1_1621368151_1/879.ivy: line 104: hlyiir.protein := 70:bv8
+
+[
+    hlyiir.protein = 70
+]
+gl1_1621368151_1/879.ivy: line 104: phlf.protein := 70:bv8
+
+[
+    phlf.protein = 70
+]
+gl1_1621368151_1/879.ivy: line 104: yfp.protein := 0:bv8
+
+[
+    yfp.protein = 0
+]
+__init := true
+
+[
+    spec.rand = 14
+]
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/879.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/879.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 2
+    ]
+    gl1_1621368151_1/879.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/879.ivy: line 38: assume err_flag | amtr.protein <= max - 10
+
+    gl1_1621368151_1/879.ivy: line 39: call amtr.protein_interaction_1
+    {
+        gl1_1621368151_1/879.ivy: line 116: amtr.protein := amtr.protein + 10
+
+        [
+            amtr.protein = 10
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/879.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/879.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 6
+    ]
+    gl1_1621368151_1/879.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/879.ivy: line 54: assume err_flag | hlyiir.protein > 9
+
+    gl1_1621368151_1/879.ivy: line 55: call hlyiir.degradation_interaction
+    {
+        gl1_1621368151_1/879.ivy: line 108: hlyiir.protein := hlyiir.protein - 10
+
+        [
+            hlyiir.protein = 60
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/879.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/879.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 1
+    ]
+    gl1_1621368151_1/879.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/879.ivy: line 34: assume err_flag | amtr.protein <= max - 10
+
+    gl1_1621368151_1/879.ivy: line 35: call amtr.protein_interaction_0
+    {
+        gl1_1621368151_1/879.ivy: line 112: amtr.protein := amtr.protein + 10
+
+        [
+            amtr.protein = 20
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/879.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/879.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 11
+    ]
+    gl1_1621368151_1/879.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/879.ivy: line 74: assume err_flag | phlf.protein <= max - 10
+
+    gl1_1621368151_1/879.ivy: line 75: call phlf.protein_interaction_1
+    {
+        gl1_1621368151_1/879.ivy: line 116: phlf.protein := phlf.protein + 10
+
+        [
+            phlf.protein = 80
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/879.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/879.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 13
+    ]
+    gl1_1621368151_1/879.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/879.ivy: line 82: assume err_flag | yfp.protein <= max - 10
+
+    gl1_1621368151_1/879.ivy: line 83: call yfp.protein_interaction_0
+    {
+        gl1_1621368151_1/879.ivy: line 112: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 10
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/879.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/879.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 6
+    ]
+    gl1_1621368151_1/879.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/879.ivy: line 54: assume err_flag | hlyiir.protein > 9
+
+    gl1_1621368151_1/879.ivy: line 55: call hlyiir.degradation_interaction
+    {
+        gl1_1621368151_1/879.ivy: line 108: hlyiir.protein := hlyiir.protein - 10
+
+        [
+            hlyiir.protein = 50
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/879.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/879.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 2
+    ]
+    gl1_1621368151_1/879.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/879.ivy: line 38: assume err_flag | amtr.protein <= max - 10
+
+    gl1_1621368151_1/879.ivy: line 39: call amtr.protein_interaction_1
+    {
+        gl1_1621368151_1/879.ivy: line 116: amtr.protein := amtr.protein + 10
+
+        [
+            amtr.protein = 30
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/879.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/879.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 14
+    ]
+    gl1_1621368151_1/879.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/879.ivy: line 86: assume err_flag | yfp.protein <= max - 10
+
+    gl1_1621368151_1/879.ivy: line 87: call yfp.protein_interaction_1
+    {
+        gl1_1621368151_1/879.ivy: line 116: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 20
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/879.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/879.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 13
+    ]
+    gl1_1621368151_1/879.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/879.ivy: line 82: assume err_flag | yfp.protein <= max - 10
+
+    gl1_1621368151_1/879.ivy: line 83: call yfp.protein_interaction_0
+    {
+        gl1_1621368151_1/879.ivy: line 112: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 30
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/879.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/879.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 2
+    ]
+    gl1_1621368151_1/879.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/879.ivy: line 38: assume err_flag | amtr.protein <= max - 10
+
+    gl1_1621368151_1/879.ivy: line 39: call amtr.protein_interaction_1
+    {
+        gl1_1621368151_1/879.ivy: line 116: amtr.protein := amtr.protein + 10
+
+        [
+            amtr.protein = 40
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    gl1_1621368151_1/879.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    gl1_1621368151_1/879.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 14
+    ]
+    gl1_1621368151_1/879.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    gl1_1621368151_1/879.ivy: line 86: assume err_flag | yfp.protein <= max - 10
+
+    gl1_1621368151_1/879.ivy: line 87: call yfp.protein_interaction_1
+    {
+        gl1_1621368151_1/879.ivy: line 116: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 40
+        ]
+    }
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************
