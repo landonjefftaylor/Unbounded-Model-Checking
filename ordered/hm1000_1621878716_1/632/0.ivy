@@ -1,0 +1,139 @@
+#lang ivy1.7
+
+attribute method = mc
+
+#Note: work on labels as called actions
+
+type bv8
+interpret bv8 -> bv[8]
+
+var max : bv8
+
+var a0 : bv8
+var b0: bv8
+var h0 : bv8
+var p0 : bv8
+var y0 : bv8
+
+object spec = {
+  type bv4
+  interpret bv4 -> bv[4]
+  individual rand : bv4
+  
+  after init {
+    #set the max value for things
+    max := 100;
+  }
+  
+  before administrate {
+    require yfp.protein < 30
+  }
+  
+  action administrate = {
+
+    a0 := amtr.protein;
+    b0 := beti.protein;
+    h0 := hlyiir.protein;
+    p0 := phlf.protein;
+    y0 := yfp.protein;
+
+    rand := *;
+    assume rand ~= 15;
+    if rand = 0 {
+      require amtr.protein > 9;
+      call amtr.degradation_interaction
+    }
+    else if rand = 1 {
+      require amtr.protein <= (max - 10);
+      call amtr.protein_interaction_0
+    }
+    else if rand = 2 {
+      require amtr.protein <= (max - 10);
+      call amtr.protein_interaction_1
+    }
+    else if rand = 3 {
+      require beti.protein > 9;
+      call beti.degradation_interaction
+    }
+    else if rand = 4 {
+      require beti.protein <= (max - 10);
+      call beti.protein_interaction_0
+    }
+    else if rand = 5 {
+      require beti.protein <= (max - 10);
+      call beti.protein_interaction_1
+    }
+    else if rand = 6 {
+      require hlyiir.protein > 9;
+      call hlyiir.degradation_interaction
+    }
+    else if rand = 7 {
+      require hlyiir.protein <= (max - 10);
+      call hlyiir.protein_interaction_0
+    }
+    else if rand = 8 {
+      require hlyiir.protein <= (max - 10);
+      call hlyiir.protein_interaction_1
+    }
+    else if rand = 9 {
+      require phlf.protein > 9;
+      call phlf.degradation_interaction
+    }
+    else if rand = 10 {
+      require phlf.protein <= (max - 10);
+      call phlf.protein_interaction_0
+    }
+    else if rand = 11 {
+      require phlf.protein <= (max - 10);
+      call phlf.protein_interaction_1
+    }
+    else if rand = 12 {
+      require yfp.protein > 9;
+      call yfp.degradation_interaction
+    }
+    else if rand = 13 {
+      require yfp.protein <= (max - 10);
+      call yfp.protein_interaction_0
+    }
+    else if rand = 14 {
+      require yfp.protein <= (max - 10);
+      call yfp.protein_interaction_1
+    };
+    
+    assume ~(yfp.protein < 30) -> (amtr.protein = 30 & beti.protein = 70 & hlyiir.protein = 40 & phlf.protein = 90 & yfp.protein = 40);    
+  } #end administrate
+  
+  export administrate
+  
+} #end sync
+
+
+module protein_module(x) = {
+
+  individual protein : bv8
+  
+  after init {
+    protein := x
+  }
+  
+  action degradation_interaction = {
+    protein := protein - 10
+  } #end degradation_interaction
+  
+  action protein_interaction_0 = {
+    protein := protein + 10
+  } #end protein_interaction_0
+  
+  action protein_interaction_1 = {
+    protein := protein + 10
+  } #end protein_interaction_1
+  
+} #end protein_module
+
+instance amtr : protein_module(0)
+instance beti : protein_module(70)
+instance hlyiir : protein_module(70)
+instance phlf : protein_module(70)
+instance yfp : protein_module(0)
+
+invariant yfp.protein < 30

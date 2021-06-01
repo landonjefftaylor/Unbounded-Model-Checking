@@ -1,0 +1,3 @@
+Testing endpoint amtr=40 beti=60 hlyiir=80 phlf=100 yfp=40
+a0 = 40 & b0 = 60 & h0 = 80 & p0 = 100 & y0 = 30
+
