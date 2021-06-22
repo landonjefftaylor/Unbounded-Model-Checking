@@ -1,0 +1,414 @@
+
+Isolate this:
+
+********************************************************************************
+
+This version has been modified by Landon Taylor. landon.taylor@aggiemail.usu.edu
+The ABCModelChecker function is using 'pdr -qt -L pdr_log.txt'. For more info, 
+
+
+install abc, and on the command line use 'abc' > 'pdr --help'
+hm2000_1622823790_1/268.ivy: line 127: Model checking invariant
+
+Instantiating quantifiers (see logfiles/ivy_mc_1623015820.log for instantiations)...
+Expanding schemata...
+Instantiating axioms...
+file name: aigerfiles/1623015820.aag
+aigtoaig_path:/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/aigtoaig
+abc_path: /usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc
+using cmd ['/usr/local/lib/python2.7/dist-packages/ms_ivy-1.7.0-py2.7.egg/ivy/bin/abc', '-c', 'read_aiger aigerfiles/1623015820.aig; pdr -qt -L aigerfiles/1623015820_pdr.log; write_aiger_cex  aigerfiles/1623015820.out']
+
+Model checker output:
+--------------------------------------------------------------------------------
+ABC command line: "read_aiger aigerfiles/1623015820.aig; pdr -qt -L aigerfiles/1623015820_pdr.log; write_aiger_cex  aigerfiles/1623015820.out".
+
+Output 0 of miter "aigerfiles/1623015820" was asserted in frame 14.  Time =   638.82 sec
+--------------------------------------------------------------------------------
+
+FAIL
+
+Counterexample trace follows...
+********************************************************************************
+
+Counterexample follows:
+--------------------------------------------------------------------------------
+err_flag := false
+
+hm2000_1622823790_1/268.ivy: line 19: max := 100:bv8
+
+[
+    max = 100
+]
+hm2000_1622823790_1/268.ivy: line 104: amtr.protein := 0:bv8
+
+[
+    amtr.protein = 0
+]
+hm2000_1622823790_1/268.ivy: line 104: beti.protein := 70:bv8
+
+[
+    beti.protein = 70
+]
+hm2000_1622823790_1/268.ivy: line 104: hlyiir.protein := 70:bv8
+
+[
+    hlyiir.protein = 70
+]
+hm2000_1622823790_1/268.ivy: line 104: phlf.protein := 70:bv8
+
+[
+    phlf.protein = 70
+]
+hm2000_1622823790_1/268.ivy: line 104: yfp.protein := 0:bv8
+
+[
+    yfp.protein = 0
+]
+__init := true
+
+[
+    spec.rand = 15
+]
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 3
+    ]
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 42: assume err_flag | beti.protein > 9
+
+    hm2000_1622823790_1/268.ivy: line 43: call beti.degradation_interaction
+    {
+        hm2000_1622823790_1/268.ivy: line 108: beti.protein := beti.protein - 10
+
+        [
+            beti.protein = 60
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 42: assume err_flag | beti.protein > 9
+
+    hm2000_1622823790_1/268.ivy: line 43: call beti.degradation_interaction
+    {
+        hm2000_1622823790_1/268.ivy: line 108: beti.protein := beti.protein - 10
+
+        [
+            beti.protein = 50
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 9
+    ]
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 66: assume err_flag | phlf.protein > 9
+
+    hm2000_1622823790_1/268.ivy: line 67: call phlf.degradation_interaction
+    {
+        hm2000_1622823790_1/268.ivy: line 108: phlf.protein := phlf.protein - 10
+
+        [
+            phlf.protein = 60
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 66: assume err_flag | phlf.protein > 9
+
+    hm2000_1622823790_1/268.ivy: line 67: call phlf.degradation_interaction
+    {
+        hm2000_1622823790_1/268.ivy: line 108: phlf.protein := phlf.protein - 10
+
+        [
+            phlf.protein = 50
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 66: assume err_flag | phlf.protein > 9
+
+    hm2000_1622823790_1/268.ivy: line 67: call phlf.degradation_interaction
+    {
+        hm2000_1622823790_1/268.ivy: line 108: phlf.protein := phlf.protein - 10
+
+        [
+            phlf.protein = 40
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 3
+    ]
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 42: assume err_flag | beti.protein > 9
+
+    hm2000_1622823790_1/268.ivy: line 43: call beti.degradation_interaction
+    {
+        hm2000_1622823790_1/268.ivy: line 108: beti.protein := beti.protein - 10
+
+        [
+            beti.protein = 40
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 9
+    ]
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 66: assume err_flag | phlf.protein > 9
+
+    hm2000_1622823790_1/268.ivy: line 67: call phlf.degradation_interaction
+    {
+        hm2000_1622823790_1/268.ivy: line 108: phlf.protein := phlf.protein - 10
+
+        [
+            phlf.protein = 30
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 1
+    ]
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 34: assume err_flag | amtr.protein <= max - 10
+
+    hm2000_1622823790_1/268.ivy: line 35: call amtr.protein_interaction_0
+    {
+        hm2000_1622823790_1/268.ivy: line 112: amtr.protein := amtr.protein + 10
+
+        [
+            amtr.protein = 10
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 13
+    ]
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 82: assume err_flag | yfp.protein <= max - 10
+
+    hm2000_1622823790_1/268.ivy: line 83: call yfp.protein_interaction_0
+    {
+        hm2000_1622823790_1/268.ivy: line 112: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 10
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 82: assume err_flag | yfp.protein <= max - 10
+
+    hm2000_1622823790_1/268.ivy: line 83: call yfp.protein_interaction_0
+    {
+        hm2000_1622823790_1/268.ivy: line 112: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 20
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 14
+    ]
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 86: assume err_flag | yfp.protein <= max - 10
+
+    hm2000_1622823790_1/268.ivy: line 87: call yfp.protein_interaction_1
+    {
+        hm2000_1622823790_1/268.ivy: line 116: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 30
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 9
+    ]
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 66: assume err_flag | phlf.protein > 9
+
+    hm2000_1622823790_1/268.ivy: line 67: call phlf.degradation_interaction
+    {
+        hm2000_1622823790_1/268.ivy: line 108: phlf.protein := phlf.protein - 10
+
+        [
+            phlf.protein = 20
+        ]
+    }
+
+}
+
+err_flag := false
+
+call ext:spec.administrate
+
+{
+    hm2000_1622823790_1/268.ivy: line 23: assume err_flag | yfp.protein < 30
+
+    hm2000_1622823790_1/268.ivy: line 27: spec.rand := *
+
+    [
+        spec.rand = 14
+    ]
+    hm2000_1622823790_1/268.ivy: line 28: assume err_flag | spec.rand ~= 15
+
+    hm2000_1622823790_1/268.ivy: line 86: assume err_flag | yfp.protein <= max - 10
+
+    hm2000_1622823790_1/268.ivy: line 87: call yfp.protein_interaction_1
+    {
+        hm2000_1622823790_1/268.ivy: line 116: yfp.protein := yfp.protein + 10
+
+        [
+            yfp.protein = 40
+        ]
+    }
+
+}
+
+
+--------------------------------------------------------------------------------
+
+********************************************************************************
